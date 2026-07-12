@@ -1,0 +1,50 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 3 items
+
+../tests/test_outputs.py EEE                                             [100%]
+
+==================================== ERRORS ====================================
+______________________ ERROR at setup of test_criterion_1 ______________________
+
+    @pytest.fixture
+    def report_data():
+>       assert Path("/app/report.json").exists(), "no /app/report.json found"
+E       AssertionError: no /app/report.json found
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+E        +      where PosixPath('/app/report.json') = Path('/app/report.json')
+
+/tests/test_outputs.py:7: AssertionError
+______________________ ERROR at setup of test_criterion_2 ______________________
+
+    @pytest.fixture
+    def report_data():
+>       assert Path("/app/report.json").exists(), "no /app/report.json found"
+E       AssertionError: no /app/report.json found
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+E        +      where PosixPath('/app/report.json') = Path('/app/report.json')
+
+/tests/test_outputs.py:7: AssertionError
+______________________ ERROR at setup of test_criterion_3 ______________________
+
+    @pytest.fixture
+    def report_data():
+>       assert Path("/app/report.json").exists(), "no /app/report.json found"
+E       AssertionError: no /app/report.json found
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+E        +      where PosixPath('/app/report.json') = Path('/app/report.json')
+
+/tests/test_outputs.py:7: AssertionError
+=========================== short test summary info ============================
+ERROR ../tests/test_outputs.py::test_criterion_1 - AssertionError: no /app/re...
+ERROR ../tests/test_outputs.py::test_criterion_2 - AssertionError: no /app/re...
+ERROR ../tests/test_outputs.py::test_criterion_3 - AssertionError: no /app/re...
+============================== 3 errors in 0.01s ===============================
